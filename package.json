@@ -6,7 +6,7 @@
   "scripts": {
     "test": "scss-lint src/sass/* --config lint.yml",
     "postinstall": "yarn global add gulp",
-    "build": "gulp pages && gulp js && gulp sass && gulp images && gulp fonts"
+    "build": "gulp pages && gulp js && gulp js_v && gulp sass && gulp images && gulp fonts"
   },
   "repository": {
     "type": "git",
