@@ -1,0 +1,122 @@
+@import 'variables';
+
+.nav {
+  padding: 26px 0;
+  background: rgba(12, 20, 28, 0.1);
+  backdrop-filter: blur(50px);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: .3s;
+
+  &.fixed {
+    padding: 16px 0;
+
+    .logo {
+      img {
+        max-width: 167px;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      max-width: 267px;
+      transition: .3s;
+    }
+  }
+
+  .logo-col {
+    max-width: 367px;
+  }
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  li {
+    a {
+      font-family: 'Jost';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: right;
+      color: #FFFFFF;
+      transition: .15s;
+      position: relative;
+
+      &:before {
+        content: '';
+        height: 2px;
+        width: 0;
+        background: #FCD08B;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        transition: .15s;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+
+      &.nav-menu-btn {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: #FCD08B;
+        border: 1px solid #FCD08B;
+        border-radius: 6px;
+        padding: 15px 56px;
+
+        &:before {
+          display: none;
+        }
+
+        &:hover {
+          background: #FCD08B;
+          color: #803D28;
+        }
+      }
+    }
+
+    &.nav-menu-group-btn {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+}
+
+.head {
+  &-bg {
+    background: url('../images/head-bg.webp') no-repeat center top;
+    background-size: cover;
+    padding-top: 402px;
+  }
+
+  max-width: 715px;
+  margin-left: auto;
+}
+
+
+
+body {
+  overflow-x: hidden;
+  background: #1E1E1E;
+  @import 'MediaQueries/main';
+}
