@@ -1,9 +1,32 @@
 @import '../../mq';
 
 @media #{$tabletPortrait} {
-  // @import '../mobile';
+  @import '../mobile';
 
   & {
+     .head-numbers .content {
+        flex-wrap: nowrap;
+        .title {
+          font-size: 52px;
+        }
 
+        .text {
+          font-size: 18px;
+          max-width: 140px;
+          margin-left: 20px;
+        }
+    }
+
+    .head {
+      padding-bottom: 0;
+    }
+
+    .news-item {
+      margin: 0 0 24px;
+    }
+
+    .partners-list {
+      flex-direction: row;
+    }
   }
 }
