@@ -1,0 +1,39 @@
+.head-about {
+    text-align: center;
+    padding-top: 668px;
+    padding-bottom: 126px;
+    background: url('../images/about-bg.webp') no-repeat center top;
+    background-size: cover;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 60px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    .head-about {
+        padding-top: vw(668px);
+        padding-bottom: vw(126px);
+    
+        h1 {
+            margin-bottom: vw(20px);
+        }
+    
+        p {
+            font-size: vw(25px);
+            line-height: vw(60px);
+            margin-bottom: vw(100px);
+        }
+    }
+}

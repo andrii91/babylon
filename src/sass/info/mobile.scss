@@ -298,5 +298,77 @@
     .news .h2 {
         text-align: center;
       }
+    .head-about {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        p {
+            font-size: 12px;
+            line-height: 25px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .contact-us form .col-lg-12, .contact-us form .col-md-6, .contact-us form .col-sm-6 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .contact-us form {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .head-faq {
+        padding-top: 280px;
+        padding-bottom: 50px;
+        background: url(../images/faq-bg.webp) no-repeat right 60px;
+        background-size: 820px;
+
+        &-title {
+            font-size: 92px;
+            line-height: 133px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .faq-item {
+        .title {
+            padding-right: 20px;
+            font-size: 14px;
+            line-height: 1.2;
+
+            &::after {
+                width: 13px;
+                height: 13px;
+                background-size: 100%;
+            }
+        }
+
+        .content {
+            font-size: 10px;
+            line-height: 22px;
+            p {
+                font-size: 10px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .contact-us {
+        padding: 50px 0;
+        p {
+            font-size: 12px;
+            line-height: 25px;
+            margin-bottom: 30px;
+        }
+
+        .contact-email {
+            img {
+                width: 25px;
+                margin-right: 10px;
+            }
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
     
 }

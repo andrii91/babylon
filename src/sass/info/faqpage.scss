@@ -1,0 +1,278 @@
+.head-faq {
+    background: url('../images/faq-bg.webp') no-repeat center top;
+    background-size: cover;
+    padding-top: 190px;
+    padding-bottom: 100px;
+
+    &-content {
+        max-width: 810px;
+    }
+
+    &-title {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 182px;
+        line-height: 263px;
+        text-transform: uppercase;
+        color: #FCD08B;
+        margin-bottom: 20px;
+    }
+}
+
+.faq-item {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   
+
+    .title {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 50px;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        padding-right: 70px;
+        position: relative;
+    
+        &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            transition: .3s;
+            background: url('../images/icon-down.svg') no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &.active {
+            &::after {
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+    }
+
+    .content {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 50px;
+        color: rgba(255, 255, 255, 0.8);
+        display: none;
+        padding-right: 70px;
+        margin-top: 10px;
+
+        p {
+            font-size: 18px;
+            line-height: 50px;
+        }
+
+    }
+}
+
+.contact-us {
+    padding: 200px 0;
+    max-width: 1168px;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+        margin-top: 10px;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 50px;
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    form {
+        margin-left: -35px; 
+        margin-right: -35px;
+        .col-md-6, .col-sm-6, .col-lg-12 {
+            padding-left: 35px;
+            padding-right: 35px;
+           
+        }
+        label {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+            margin-bottom: 5px; 
+            display: block;
+        }
+
+        .input-text {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFFFFF;
+            background: transparent;
+            padding: 16px 20px;
+            border: 1px solid rgba(252, 208, 139, 0.2);
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+
+            &.error {
+                border-color: #803D28;
+
+                &:focus-visible, &:focus {
+                    outline-color: #803D28;
+                    border-color: #803D28;
+                }
+            }
+        }
+
+        textarea.input-text {
+            min-height: 109px;
+            resize: none;
+        }
+    }
+
+    .contact-email {
+        display: flex; 
+        align-items: center;
+        justify-content: flex-end;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        color: #FCD08B;
+        &:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            width: 35px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.label {
+    position: relative;
+    svg {
+        color: #803D28;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    .head-faq {
+        padding-top: vw(190px);
+        padding-bottom: vw(100px);
+    
+        &-content {
+            max-width: vw(810px);
+        }
+    
+        &-title {
+            font-size: vw(182px);
+            line-height: vw(263px);
+            margin-bottom: vw(20px);
+        }
+    }
+    
+    .faq-item {
+        padding-bottom: vw(20px);
+        margin-bottom: vw(20px);
+    
+        .title {
+            font-size: vw(25px);
+            line-height: vw(50px);
+            padding-right: vw(70px);
+        
+            &::after {
+                width: vw(20px);
+                height: vw(20px);
+            }
+        }
+    
+        .content {
+            font-size: vw(18px);
+            line-height: vw(50px);
+            padding-right: vw(70px);
+    
+            p {
+                font-size: vw(18px);
+                line-height: vw(50px);
+            }
+    
+        }
+    }
+    
+    .contact-us {
+        padding: vw(200px) 0;
+        max-width: vw(1168px);
+        p {
+            margin-top: vw(10px);
+            font-size: vw(18px);
+            line-height: vw(50px);
+            margin-bottom: vw(50px);
+        }
+        form {
+            margin-left: vw(-35px); 
+            margin-right: vw(-35px);
+            .col-lg-6, .col-sm-6, .col-lg-12 {
+                padding-left: vw(35px);
+                padding-right: vw(35px);
+               
+            }
+            label {
+                font-size: vw(14px);
+                line-height: vw(21px);
+                margin-bottom: vw(5px); 
+            }
+    
+            .input-text {
+                font-size: vw(14px);
+                line-height: vw(20px);
+                padding: vw(16px) vw(20px);
+                max-width: vw(537px);
+                margin-bottom: vw(40px);
+            }
+    
+            textarea.input-text {
+                min-height: vw(109px);
+            }
+        }
+    
+        .contact-email {
+            font-size: vw(18px);
+            line-height: vw(26px);
+    
+            img {
+                width: vw(35px);
+                margin-right: vw(15px);
+            }
+        }
+    }
+    
+    .label {
+        svg {
+            right: vw(16px);
+            width: vw(30px);
+            height: vw(30px);
+        }
+    }
+    
+}
