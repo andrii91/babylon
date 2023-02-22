@@ -370,5 +370,52 @@
             line-height: 17px;
         }
     }
+
+    .head-pricing {
+        padding-top: 171px;
+        padding-bottom: 61px;
+        text-align: center;
+        position: relative;
+        background-position: 64% top;
+        &:before {
+            content: "";
+            background: linear-gradient(269.79deg, rgba(15, 25, 34, 0) 0.18%, rgba(15, 25, 34, 0.680495) 47.22%, #0F1922 99.82%);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+
+    .pricing {
+        position: relative;
+        z-index: 2;;
+        &-title {
+            font-size: 32px;
+            line-height: 46px;
+        }
+
+        &-subtitle {
+            font-size: 12px;
+            line-height: 25px;
+            margin-bottom: 30px;
+        }
+
+        &-items {
+            li {
+                .btn {
+                    font-size: 20px;
+                    line-height: 1.2;
+
+                    span {
+                        font-size: 12px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+    
     
 }

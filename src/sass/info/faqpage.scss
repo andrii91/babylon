@@ -100,46 +100,7 @@
             padding-right: 35px;
            
         }
-        label {
-            font-family: 'Jost';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 21px;
-            color: #FFFFFF;
-            margin-bottom: 5px; 
-            display: block;
-        }
-
-        .input-text {
-            font-family: 'Jost';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
-            color: #FFFFFF;
-            background: transparent;
-            padding: 16px 20px;
-            border: 1px solid rgba(252, 208, 139, 0.2);
-            border-radius: 5px;
-            display: block;
-            width: 100%;
-            margin-bottom: 40px;
-
-            &.error {
-                border-color: #803D28;
-
-                &:focus-visible, &:focus {
-                    outline-color: #803D28;
-                    border-color: #803D28;
-                }
-            }
-        }
-
-        textarea.input-text {
-            min-height: 109px;
-            resize: none;
-        }
+        
     }
 
     .contact-email {
@@ -160,6 +121,52 @@
             width: 35px;
             margin-right: 15px;
         }
+    }
+}
+
+form {
+    label {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: #FFFFFF;
+        margin-bottom: 5px; 
+        display: block;
+        span {
+            color: #FF0000;
+        }
+    }
+
+    .input-text {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+        background: transparent;
+        padding: 16px 20px;
+        border: 1px solid rgba(252, 208, 139, 0.2);
+        border-radius: 5px;
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+
+        &.error {
+            border-color: #803D28;
+
+            &:focus-visible, &:focus {
+                outline-color: #803D28;
+                border-color: #803D28;
+            }
+        }
+    }
+
+    textarea.input-text {
+        min-height: 109px;
+        resize: none;
     }
 }
 
@@ -237,23 +244,7 @@
                 padding-right: vw(35px);
                
             }
-            label {
-                font-size: vw(14px);
-                line-height: vw(21px);
-                margin-bottom: vw(5px); 
-            }
-    
-            .input-text {
-                font-size: vw(14px);
-                line-height: vw(20px);
-                padding: vw(16px) vw(20px);
-                max-width: vw(537px);
-                margin-bottom: vw(40px);
-            }
-    
-            textarea.input-text {
-                min-height: vw(109px);
-            }
+            
         }
     
         .contact-email {
@@ -264,6 +255,26 @@
                 width: vw(35px);
                 margin-right: vw(15px);
             }
+        }
+    }
+
+    form {
+        label {
+            font-size: vw(14px);
+            line-height: vw(21px);
+            margin-bottom: vw(5px); 
+        }
+
+        .input-text {
+            font-size: vw(14px);
+            line-height: vw(20px);
+            padding: vw(16px) vw(20px);
+            max-width: vw(537px);
+            margin-bottom: vw(40px);
+        }
+
+        textarea.input-text {
+            min-height: vw(109px);
         }
     }
     

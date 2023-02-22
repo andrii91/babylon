@@ -1,0 +1,143 @@
+.head-pricing {
+   padding-top: 237px;
+   padding-bottom: 98px;
+   background: url('../images/pricing-bg.webp') no-repeat center top;
+   background-size: cover;
+}
+
+.pricing {
+    max-width: 700px;
+    &-title {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 61px;
+        text-transform: uppercase;
+        color: #FCD08B;
+        margin-bottom: 10px;
+    }
+
+    &-subtitle {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 50px;
+        color: #FFFFFF;
+        margin-bottom: 60px;
+    }
+
+    &-items {
+        max-width: 700px;
+
+        li {
+            margin-bottom: 50px;
+
+            .btn {
+                width: 100%;
+                min-height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 50px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.8);
+
+                &:hover {
+                    color: #803d28;
+                }
+
+                span {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 40px;
+                }
+
+            }
+        }
+    }
+
+    &-link {
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #FFFFFF;
+        display: block;
+        max-width: 700px;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+    }
+
+    &-qr {
+        padding-top: 40px;
+        margin-bottom: 60px;
+        img {
+            max-width: 344px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    .head-pricing {
+        padding-top: vw(237px);
+        padding-bottom: vw(98px);
+     }
+     
+     .pricing {
+        max-width: vw(700px);
+
+         &-title {
+             font-size: vw(42px);
+             line-height: vw(61px);
+             margin-bottom: vw(10px);
+         }
+     
+         &-subtitle {
+             font-size: vw(18px);
+             line-height: vw(50px);
+             margin-bottom: vw(60px);
+         }
+     
+         &-items {
+             max-width: vw(700px);
+     
+             li {
+                 margin-bottom: vw(50px);
+     
+                 .btn {
+                     min-height: vw(120px);
+                     font-size: vw(25px);
+                     line-height: vw(50px);
+     
+                     span {
+                         font-size: vw(18px);
+                         line-height: vw(40px);
+                     }
+     
+                 }
+             }
+         }
+     
+         &-link {
+             font-size: vw(24px);
+             line-height: vw(40px);
+             max-width: vw(700px);
+         }
+     }
+     
+}

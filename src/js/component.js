@@ -92,6 +92,12 @@ $( document ).ready(function() {
   });
 
 
+  $('input[name="phone"]').inputmask("+9{1,15}");
+  $('#card_numbe').inputmask("9999 9999 9999 9999");
+  $('#exp_date').inputmask("99/99");
+  $('#cvv').inputmask("999");
+
+
   // $('.stories-slider').slick({
   //   centerMode: true,
   //   arrows: true,
