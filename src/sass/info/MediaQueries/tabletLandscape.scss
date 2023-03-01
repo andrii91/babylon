@@ -213,4 +213,19 @@
 .pricing-p, .profile-info {
     margin-top: 50px;
 }
+
+    .roadmap-list::after, .roadmap-list .large-title::after, .roadmap-list .large-title .before {
+        display: none;
+    }
+
+    .roadmap-list {
+        .large-title {
+            font-size: 135px;
+        }
+        .col-lg-6 {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+    }
 }

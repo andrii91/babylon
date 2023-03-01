@@ -3,6 +3,89 @@
    padding-bottom: 157px;
    background: url('../images/profile-bg.webp') no-repeat center top;
    background-size: cover;
+
+   &.profile-update {
+    background: url('../images/profile-update-bg.webp') no-repeat center top;
+    background-size: cover;
+    padding-top: 294px;
+    padding-bottom: 244px;
+   }
+}
+
+.profile-update {
+  &-title {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 61px;
+    text-transform: uppercase;
+    color: #FCD08B;
+    margin-bottom: 60px;
+  }
+
+  &-form {
+    max-width: 617px;
+    .input-text {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    .submit {
+      margin-top: 80px;
+    }
+  }
+
+  .upload-photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border: 1px solid #FCD08B;
+      border-radius: 20px;
+      padding: 31px;
+      object-fit: cover;
+
+      &.change {
+        padding: 0;
+      }
+    }
+  }
+
+  .upload-label {
+    position: relative;
+    .title {
+      font-family: 'Jost';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 23px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    input {
+      opacity: 0;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      .btn {
+        background: #fcd08b;
+        color: #803d28;
+      }
+    }
+  }
 }
 
 .profile {
@@ -174,6 +257,11 @@
   .head-profile {
       padding-top: vw(314px);
       padding-bottom: vw(157px);
+
+      &.profile-update {
+        padding-top: vw(294px);
+        padding-bottom: vw(244px);
+       }
   }
   
   .profile {
@@ -261,5 +349,48 @@
         line-height: vw(32px);
       }
     }
-  }   
+  } 
+  
+  .profile-update {
+    &-title {
+      font-size: vw(42px);
+      line-height: vw(61px);
+      margin-bottom: vw(60px);
+    }
+  
+    &-form {
+      max-width: vw(617px);
+      .input-text {
+        margin-bottom: vw(20px);
+      }
+  
+      .submit {
+        margin-top: vw(80px);
+      }
+    }
+  
+    .upload-photo {
+      gap: vw(50px);
+      margin-bottom: vw(50px);
+  
+      img {
+        width: vw(150px);
+        height: vw(150px);
+        border-radius: vw(20px);
+        padding: vw(31px);
+  
+        &.change {
+          padding: 0;
+        }
+      }
+    }
+  
+    .upload-label {
+      .title {
+        font-size: vw(16px);
+        line-height: vw(23px);
+        margin-bottom: vw(20px);
+      }
+    }
+  }
 }

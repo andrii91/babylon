@@ -86,6 +86,8 @@ $( document ).ready(function() {
       $form.find('.submit').removeClass('inactive');
       $form.find('.submit').prop('disabled', false);
       $form[0].reset();
+
+      $('#check-success').prop('disabled', true)
       
     }, 1000);
 
@@ -96,6 +98,77 @@ $( document ).ready(function() {
   $('#card_numbe').inputmask("9999 9999 9999 9999");
   $('#exp_date').inputmask("99/99");
   $('#cvv').inputmask("999");
+  $('#referral').inputmask("9999999");
+  
+
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#profile-update-form-img').attr('src', e.target.result).addClass('change');
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+  $('#avatar').change(function(){
+     readURL(this);
+  })
+
+  $('.password-icon').click(function(){
+    $(this).toggleClass('show-password');
+    if($(this).parent().find('input').attr('type') === "password") {
+      $(this).parent().find('input').attr('type', 'text');
+    }else{
+      $(this).parent().find('input').attr('type', 'password');
+    }
+  })
+
+  $('#check').change(function(){
+    if($(this).is(':checked')) {
+      $(this).parents('form').find('#check-success').removeAttr('disabled')
+    }else{
+      $(this).parents('form').find('#check-success').attr('disabled', 'disabled')
+    }
+  })
+
+  $(window).scroll(function () {
+    var $sections = $('.roadmap-list .large-title');
+
+
+    $sections.each(function (i, el) {
+      const top = $(el).offset().top - 500;
+      const bottom = top + $(el).height() + $(window).height()*3;
+      const scroll = $(window).scrollTop();
+      let heightBefore = $('.item'+i).height() - 20;
+
+      const topMenu = $(el).offset().top - 70;
+      const bottomMunu = topMenu + $(el).height() + $(window).height()/3;
+      //    var id = $(el).attr('id');
+      if (scroll > top && scroll < bottom && $(el).hasClass('large-title')) {
+        $(el).addClass('active');
+        $(el).find('.before').height(heightBefore);
+
+        // $(el).find('.before').animate({
+        //   opacity: 1,
+        //   height: heightBefore
+        // });
+
+      } else {
+        $(el).removeClass('active');
+      }
+
+      if (scroll > topMenu && scroll < bottomMunu) {
+        // $('.nav-btn').addClass('dark-mode');
+        // $('.logo').addClass('dark-mode');
+
+      } else {}
+    })
+
+
+  });
 
 
   // $('.stories-slider').slick({
